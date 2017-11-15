@@ -1,0 +1,58 @@
+
+<!--The content below is only a placeholder and can be replaced.-->
+<div id="header-wrapper">
+  <div id="header" class="container">
+    <div class="rxlogo">
+      <img src="../../../a4app/assets/templated-erubescent/images/rx2ulogo.png">
+    </div>
+    <div id="logo">
+      <strong style="font-family: 'Comic Sans MS'; color: #ED7070;;font-weight: bolder; font-size: 45px"> Rx2U </strong><br>
+    </div>
+
+    <div id="menu">
+      <ul>
+        <li><a routerLink="">Home</a></li>
+        <li><a routerLink="/rxpickup">Request Rx Pickup</a></li>
+        <li><a routerLink="/orderstatus" >Check Order Status</a></li>
+        <li><a routerLink="/about" >About</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div id="verilog" >{{output}}</div>
+  <div id="loginform" *ngIf="!userLoggedin"> <!--value from dataService, which initial set to be true. !userLoggedin means true-->
+    <form name="login" ngNativeValidate routerLink="{{route}}">
+      User name: <br>
+      <input type="text" name="username" #username required><br>
+      Password: <br>
+      <input type="text" name="password" #password required><br>
+      <input type="submit" value="Login" (click)="validateLogin(username.value, password.value)">
+    </form>
+  </div>
+
+
+  <div *ngIf="userLoggedin">Welcome <output style="color: blue">{{first}} {{last}}</output>!
+    <a (click)="logOff()" routerLink=""> Log off </a> </div>
+  <br>
+
+</div>
+
+<div id="header-featured" > </div>
+<div id="banner-wrapper">
+  <div id="banner" class="container">
+    <i style="font-weight: normal; font-size: large; font-family: fantasy">Prescriptions on wheels conveniently to you</i><br><br>
+  </div>
+</div>
+
+<div id="wrapper">
+  <div id="featured-wrapper">
+    <div class="extra2 margin-btm container">
+    </div >
+
+  </div>
+</div>
+
+<div id="copyright" class="container">
+  <p>&copy; Untitled. All rights reserved. | Photos by <a href="https://images.google.com/">GoogleImage</a> | Design by <a href="http://templated.co" rel="nofollow">TEMPLATED</a>.</p>
+</div>
+

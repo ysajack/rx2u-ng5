@@ -1,0 +1,77 @@
+
+<!--The content below is only a placeholder and can be replaced.-->
+<div id="header-wrapper">
+  <div id="header" class="container">
+
+    <div class="rxlogo">
+      <img src="../../../../a4rx2u/assets/templated-erubescent/images/rx2ulogo.png">
+    </div>
+    <div id="logo">
+      <strong style="font-family: 'Comic Sans MS'; color: #ED7070;;font-weight: bolder; font-size: 45px"> Rx2U </strong><br>
+    </div>
+
+    <div id="menu">
+      <ul>
+        <li><a routerLink={{homeRoute}}>Home</a></li>
+        <li><a routerLink="/rxpickup">Request Rx Pickup</a></li>
+        <li><a routerLink="/orderstatus" >Check Order Status</a></li>
+        <li><a routerLink="/about" >About</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div *ngIf="userLoggedin">Welcome <output style="color: blue">{{first}} {{last}}</output>!
+    <a (click)="logOff()" routerLink=""> Log off </a> </div>
+  <br>
+
+</div>
+
+<div id="banner-wrapper">
+  <div id="banner" class="container">
+    <i style="font-weight: normal; font-size: large; font-family: fantasy">Prescriptions on wheels conveniently to you</i><br><br>
+  </div>
+</div>
+
+<div id="wrapper">
+  <div id="featured-wrapper">
+    <div class="extra2 margin-btm container">
+
+      <div class="ebox1">
+        <div class="title">
+          <h2>Your order info:</h2>
+
+          <fieldset>
+            Order number: <strong>{{orderNum.toUpperCase()}}</strong>
+            <br>
+            Name: {{fullName}}
+            <br>
+            Phone: {{phoneNum}}
+            <br><br>
+            Thanks for placing the service!
+            <br><br>
+            <button class="button" routerLink="/orderstatus">Close</button>
+          </fieldset>
+        </div>
+      </div>
+
+
+      <div class="ebox2">
+        <div class="title">
+          <span class="byline" style="text-align: left; font-weight: 800">We'll be in contact with your Pharmacy...</span>
+          <br><br>
+          <img src="../assets/templated-erubescent/images/pharmacy1.jpg">
+        </div>
+
+      </div>
+
+
+    </div >
+  </div>
+</div>
+
+<div id="copyright" class="container">
+  <p>&copy; Untitled. All rights reserved. | Photos by <a href="https://images.google.com/">GoogleImage</a> | Design by <a href="http://templated.co" rel="nofollow">TEMPLATED</a>.</p>
+</div>
+
+
+

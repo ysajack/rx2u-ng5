@@ -1,0 +1,93 @@
+
+<!--The content below is only a placeholder and can be replaced.-->
+<title>Rx Pickup</title>
+<div id="header-wrapper">
+  <div id="header" class="container">
+
+    <div class="rxlogo">
+      <img src="../../../../a4rx2u/assets/templated-erubescent/images/rx2ulogo.png">
+    </div>
+    <div id="logo">
+      <strong style="font-family: 'Comic Sans MS'; color: #ED7070;;font-weight: bolder; font-size: 45px"> Rx2U </strong><br>
+    </div>
+
+    <div id="menu">
+      <ul>
+        <li><a routerLink={{homeRoute}}>Home</a></li>
+        <li><a routerLink="/rxpickup">Request Rx Pickup</a></li>
+        <li><a routerLink="/orderstatus" >Check Order Status</a></li>
+        <li><a routerLink="/about" >About</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<div id="banner-wrapper">
+  <div id="banner" class="container">
+    <i style="font-weight: normal; font-size: large; font-family: fantasy">Prescriptions on wheels conveniently to you</i><br><br>
+  </div>
+</div>
+
+<div id="wrapper">
+  <br>
+  <!--Breadscrumbs-->
+  <div style="padding-left: 80px">
+    <a routerLink={{homeRoute}}> Home </a> >>
+    <a routerLink='/rxpickup'> Request Rx Pickup </a> >>
+    <a routerLink="/rxpickup/proxy"> Proxy </a> >>
+    <a routerLink="/rxpickup/proxy/placeorder"> Place Order </a>
+  </div>
+  <div id="featured-wrapper">
+    <div class="extra2 margin-btm container">
+      <div class="ebox1" >
+        <div class="title">
+          <h2>Please enter the following information:</h2>
+        </div>
+        <!--place order form section-->
+        <fieldset>
+          <form >
+            First Name: <br>
+            <input name="first" [(ngModel)]="firstName" #first disabled> <br>
+            Last Name: <br>
+            <input name="last" [(ngModel)]="lastName" #last disabled> <br>
+            Phone Number: <br>
+            <input name="phone" [(ngModel)]="phoneNum" #phone disabled> <br>
+            Date of Birth: <br>
+            <input type="date" name="dob" [(ngModel)]="dOb" #dob disabled> <br>
+            Rx to pick up (optional): <br>
+            <input name="rx"> <br>
+            Full Delivery Address: <br>
+            <textarea rows="3" cols="30" name="address" [(ngModel)]="aDdress" #address disabled></textarea><br>
+            Full Pharmacy Address: <br>
+            <textarea rows="3" cols="30" name="pharmacy" [(ngModel)]="pHarmacy" #pharmacy disabled></textarea><br><br>
+
+            <fieldset >
+              <legend><strong>Please confirm Proxy Agreement:</strong></legend>
+              I, <output >{{firstName}} {{lastName}}</output><br>
+              hereby agree to provide proxy to RX2U and its 3rd transportation parties
+              to provide pickup and delivery services to me.
+              <br><br>
+              <input type="checkbox" checked disabled #agree> Agree
+              <br><br>
+            </fieldset>
+
+          </form>
+          <input class="button" type="submit" routerLink="/rxpickup/proxy/placeorder/orderinfo">
+          <button class="button" routerLink="/rxpickup/proxy">Cancel</button>
+        </fieldset>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="copyright" class="container">
+  <p>&copy; Untitled. All rights reserved. | Photos by <a href="https://images.google.com/">GoogleImage</a> | Design by <a href="http://templated.co" rel="nofollow">TEMPLATED</a>.</p>
+</div>
+
+
+
+
+
+
+

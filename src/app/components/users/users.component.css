@@ -1,0 +1,5 @@
+#fill-table                                      {width: 100%; margin: auto auto 30px auto;}
+#fill-table th                                   {border: 1px solid black;  text-align: center; background-color: #FFCC99;}
+#fill-table td                                   {text-align: center;}
+#tbldiv                                          {margin: auto auto 50px auto;}
+

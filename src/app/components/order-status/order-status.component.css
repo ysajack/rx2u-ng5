@@ -1,0 +1,4 @@
+.stat td                                         {padding: 0 30px 0 55px; text-align: center; border: 1px solid #F1F1D7; }
+.stat th                                         {padding: 0 30px 0 55px; text-align: center; background-color: #F1F1D7;}
+.stat table                                      {border: 1px solid #F1F1D7; border-collapse: collapse;}
+.stat legend                                     {font-size: 1.3em;}

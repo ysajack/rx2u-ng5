@@ -1,0 +1,100 @@
+
+<!--The content below is only a placeholder and can be replaced.-->
+<title>Rx Pickup</title>
+<div id="header-wrapper">
+  <div id="header" class="container">
+
+    <div class="rxlogo">
+      <img src="../../../a4rx2u/assets/templated-erubescent/images/rx2ulogo.png">
+    </div>
+    <div id="logo">
+      <strong style="font-family: 'Comic Sans MS'; color: #ED7070;;font-weight: bolder; font-size: 45px"> Rx2U </strong><br>
+    </div>
+
+    <div id="menu">
+      <ul>
+        <li><a routerLink={{homeRoute}}>Home</a></li>
+        <li><a routerLink="/rxpickup">Request Rx Pickup</a></li>
+        <li><a routerLink="/orderstatus" >Check Order Status</a></li>
+        <li><a routerLink="/about" >About</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div id="verilog" >{{output}}</div>
+  <div id="loginform" *ngIf="!userLoggedin"> <!--value from dataService, which initial set to be true. !userLoggedin means true-->
+    <form name="login" ngNativeValidate routerLink="{{route}}">
+      User name: <br>
+      <input type="text" name="username" #username required><br>
+      Password: <br>
+      <input type="text" name="password" #password required><br>
+      <input type="submit" value="Login" (click)="validateLogin(username.value, password.value)">
+    </form>
+  </div>
+
+  <div *ngIf="userLoggedin">Welcome <output style="color: blue">{{id}} {{pw}}</output>!
+    <a (click)="logOff()" routerLink=""> Log off </a> </div>
+  <br>
+
+</div>
+
+<div id="banner-wrapper">
+  <div id="banner" class="container">
+    <i style="font-weight: normal; font-size: large; font-family: fantasy">Prescriptions on wheels conveniently to you</i><br><br>
+  </div>
+</div>
+
+<div id="wrapper">
+  <br>
+  <!--Breadscrumbs-->
+  <div style="padding-left: 80px" id="breadscrumbs">
+    <a routerLink={{homeRoute}}> Home </a> >>
+    <a routerLink='/rxpickup'> Request Rx Pickup </a> >>
+  </div>
+  <!--Left component-->
+  <div id="featured-wrapper">
+    <div class="extra2 margin-btm container">
+      <div class="ebox1">
+        <div class="title">
+          <h2>Please enter the following information:</h2>
+        </div>
+        <!--place order form section-->
+        <fieldset>
+          <form ngNativeValidate routerLink={{route}}>
+            First Name: <br>
+            <input type="text" name="first" value={{profile[0].first}} #first required><br>
+            Last Name: <br>
+            <input type="text" name="last" value={{profile[0].last}} #last required>  <br>
+            Phone Number: <br>
+            <input type="text" name="phone" value={{profile[0].cust_phone}} #phone required>
+            <br>
+            Date of Birth: <br>
+            <input type="date" name="dob" value={{profile[0].dob}} #dob required >
+
+            <br>
+            Rx to pick up (optional): <br>
+            <input type="text" name="rx" id="rx" > <br>
+            Full Delivery Address: <br>
+            <textarea rows="3" cols="30" name="address" value={{profile[0].address}} #address required></textarea><br>
+            Full Pharmacy Address: <br>
+            <textarea rows="3" cols="30" name="pharmacy" value={{profile[0].pharmacy}} #pharmacy required></textarea><br><br>
+
+            <input type="submit" class="button" value="Continue" (click)="clickContinueButton(first.value, last.value, phone.value, dob.value, address.value, pharmacy.value)">
+            <button class="button" routerLink={{homeRoute}}>Cancel</button>
+          </form>
+        </fieldset>
+
+      </div>
+    </div >
+  </div>
+</div>
+
+<div id="copyright" class="container">
+  <p>&copy; Untitled. All rights reserved. | Photos by <a href="https://images.google.com/">GoogleImage</a> | Design by <a href="http://templated.co" rel="nofollow">TEMPLATED</a>.</p>
+</div>
+
+
+
+
+
+
