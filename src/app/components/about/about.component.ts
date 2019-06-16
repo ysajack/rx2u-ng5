@@ -8,9 +8,6 @@ import { AppComponent } from '../../app.component';
   styleUrls: ['./about.component.css']
 })
 export class AboutComponent implements OnInit {
- coveredMessage: Message[];
- suggestionMessage: Message[];
- commentMessage: Message[];
   output;
   route = '/about';
   userLoggedin = this.dataService.userLoggedin;
@@ -23,15 +20,6 @@ export class AboutComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.dataService.getmessage('covered').subscribe(msg => {
-      this.coveredMessage = msg;
-    });
-    this.dataService.getmessage('suggestion').subscribe(msg => {
-      this.suggestionMessage = msg;
-    });
-    this.dataService.getmessage('comment').subscribe(msg => {
-      this.commentMessage = msg;
-    });
     this.appComp.setTitle('About');
     if (this.userLoggedin) {
       this.user = this.first + this.last;
@@ -39,22 +27,6 @@ export class AboutComponent implements OnInit {
       this.user = '';
     }
     this.homeRoute = this.dataService.setHome();
-  }
-  suggest(msg) {
-    this.dataService.putMessage(msg.value, 'suggestion', this.user).subscribe(tx => {
-      console.log(tx);
-    });
-    this.dataService.getmessage('suggestion').subscribe(msg2 => {
-      this.suggestionMessage = msg2;
-    });
-  }
-  giveComment(msg) {
-    this.dataService.putMessage(msg.value, 'comment', this.user).subscribe(tx => {
-      console.log(tx);
-    });
-    this.dataService.getmessage('comment').subscribe(msg2 => {
-      this.commentMessage = msg2;
-    });
   }
   logOff() {
     this.userLoggedin = false; // Override value from dataservice to update directly in the component;
@@ -71,8 +43,4 @@ export class AboutComponent implements OnInit {
       this.dataService.userLoggedin = true;
     }
   }
-}
-interface Message {
-  message;
-  user;
 }

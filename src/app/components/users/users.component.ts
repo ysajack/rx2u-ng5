@@ -32,7 +32,7 @@ export class UsersComponent implements OnInit {
     this.getOrder();
   }
   getOrder () {
-    this.dataService.getUserProfile(this.dataService.id, this.dataService.pw).subscribe(orderObj =>
+    this.dataService.getUserProfile(this.dataService.phone).subscribe(orderObj =>
       this.order = orderObj);
   }
 }

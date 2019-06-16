@@ -3,7 +3,7 @@
   <div id="header" class="container">
 
     <div class="rxlogo">
-      <img src="../../../a4rx2u/assets/templated-erubescent/images/rx2ulogo.png">
+      <img src="../../../dist/assets/templated-erubescent/images/rx2ulogo.png">
     </div>
     <div id="logo">
       <strong style="font-family: 'Comic Sans MS'; color: #ED7070;;font-weight: bolder; font-size: 45px"> Rx2U </strong><br>
@@ -47,86 +47,50 @@
     <div class="extra2 margin-btm container">
 
       <div style="text-align: left; padding-left: 100px">
-        <h2>I’ve covered Angular 4 as below: :)</h2> <br>
+        <h2>This site is built on:</h2> <br>
         <ul class="list">
-          <li *ngFor="let coveredMessage of coveredMessage">
-            {{coveredMessage.message}}
+          <li>
+            JavaScript/Angular4 framework, UI app hosted by Google Firebase
+          </li>
+          <li>
+            Java Rest Services hosted by Google App Engine
+          </li>
+          <li>
+            MySQL hosted by Google Cloud SQL
           </li>
         </ul>
 
         <hr>
-        <h2>Please suggest what to learn more:</h2><br>
+
+        <h2>Other design, techniques, and tools used:</h2><br>
         <ul class="list">
-          <li *ngFor="let suggestionMessage of suggestionMessage">
-            {{suggestionMessage.message}} <i style="color: #39599F">-{{suggestionMessage.user}}</i>
+          <li>
+            Single Page App (SPA)
+          </li>
+          <li>
+            Components: Parent-components, sub-components
+          </li>
+          <li>
+            Data Binding: ngModel, Interpolation
+          </li>
+          <li>
+            Service: Inter-components data transferring, external Rest Services, Injectable, rxjs, Observable
+          </li>
+          <li>
+            Manipulation: Routing and Controlling for SPA (routing components, controlling views), ngFor (looping data), events (click, ngSubmit), Input Validation
           </li>
         </ul>
 
-
-        <br><br>
-        <textarea class="input" #suggestion></textarea><br>
-          <button class="button" (click)="suggest(suggestion)" >Suggest</button>
-
-
-        <br><br><br>
         <hr>
-        <h2>Or give some comments:</h2><br>
-        <br>
-        <ul class="list">
-          <li *ngFor="let commentMessage of commentMessage">
-            {{commentMessage.message}} <i style="color: #39599F">-{{commentMessage.user}}</i>
-          </li>
-        </ul>
-
-        <br><br>
-        <textarea class="input" #comment></textarea><br>
-          <button class="button" (click)="giveComment(comment)" >Submit</button>
-
-        <br><br><br><br><br><br>
-        <hr>
-        <h2>Issues and Lessons Learned:</h2><br>
+        <h2>Application:</h2><br>
         <p>
-          - <u><strong>Issue:</strong></u> Installing Angular-CLI Global issues due to the Work machine <br>
-          + <u><strong>Overcome:</strong></u> Create and defer the global folder and configure the PATH
-        </p>
-
-        <p>
-          - <u><strong>Issue:</strong></u> CORS or Web Services issues: A4 app could not talk to my other PHP app due to CORS <br>
-          + <u><strong>Overcome:</strong></u> Configure the header to include "Access-Control-Allow-Origin:”
-          in the PHP file
-        </p>
-
-        <p>
-          - <u><strong>Issue:</strong></u>
-          Service response from the server for validating Signon credentials asynchronously
-          that it takes 2 clicks for the signon button to work<br>
-          + <u><strong>Overcome:</strong></u>
-          Use AJAX and configure to be synchronous - This seems to be depreciated for A4,
-          but using it for now until find out something else :)
-        </p>
-
-        <p>
-          - <u><strong>Issue:</strong></u> My other PHP app did not have the right API to support this A4 app, such as JSON response<br>
-          + <u><strong>Overcome:</strong></u>
-          Build new API in the PHP Web Services using the same SQL scripts and the same PHP functions,
-          but just add a JSON response type using json-encode PHP function
-        </p>
-
-        <p>
-          - <u><strong>Issue:</strong></u>
-          Deployment issues: I forgot a “/“ (slash) in the “—base=href=/folder/“ that it gives me some ugly “404” (file not found) errors :) <br>
-          + <u><strong>Overcome:</strong></u>
-          Look at the path of the files in error under the Network traffic. Then fix the path for the base href, then build and re-deploy
-        </p>
-
-        <p>
-          ......<br>
-          Thanks for checking out! :)
+          "Prescriptions on wheels" is where users can create an Rx pickup job, which will have Uber pick up once Pharmacy completes the order,
+          and Uber will deliver to the users' doorsteps.
         </p>
 
       </div>
-    </div >
 
+    </div >
   </div>
 </div>
 

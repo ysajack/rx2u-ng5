@@ -44,7 +44,7 @@ export class RequestPickupComponent implements OnInit {
     this.dataService.userLoggedin = false;
   }
   validateLogin(id, pw) {
-    if (this.dataService.validateLogin(id, pw) == 0) {
+    if (this.dataService.validateLogin(id, pw) === 0) {
       this.route = '';
       this.output = 'Incorrect user name and/or password. Please review and try again!';
     } else {
@@ -55,7 +55,7 @@ export class RequestPickupComponent implements OnInit {
     }
   }
   getUserProfile() {
-    this.dataService.getUserProfile(this.id, this.pw).subscribe(profile => {
+    this.dataService.getUserProfile(this.phone).subscribe(profile => {
       this.profile = profile;
     });
   }
