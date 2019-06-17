@@ -10,7 +10,7 @@ import { AppComponent } from '../../../app.component';
 export class OrderInfoComponent implements OnInit {
   fullName = '';
   phoneNum = '';
-  orderNum = '';
+  orderNum: any;
   homeRoute;
   userLoggedin = this.dataService.userLoggedin;
   first = this.dataService.id;
@@ -22,7 +22,7 @@ export class OrderInfoComponent implements OnInit {
   ngOnInit() {
     this.appComp.setTitle('Order Info');
     this.phoneNum = this.dataService.phone;
-    if (this.phoneNum != null) {
+    if (this.phoneNum !== '' || this.phoneNum != null) {
       this.fullName = this.dataService.first + ' ' + this.dataService.last;
       this.dataService.placeOrder(this.dataService.first, this.dataService.last, this.phoneNum,
         this.dataService.dob, this.dataService.address, this.dataService.pharmacy).subscribe(order => {

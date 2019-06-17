@@ -23,7 +23,7 @@ export class HomeComponent implements OnInit {
     this.dataService.userLoggedin = false;
   }
   validateLogin(id, pw) {
-      if (this.dataService.validateLogin(id, pw) == 0) {
+      if (this.dataService.validateLogin(id, pw) === 0) {
         this.route = '';
         this.output = 'Incorrect user name and/or password. Please review and try again!';
       } else {

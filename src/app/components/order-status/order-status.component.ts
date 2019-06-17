@@ -8,7 +8,7 @@ import { AppComponent } from '../../app.component';
   styleUrls: ['./order-status.component.css']
 })
 export class OrderStatusComponent implements OnInit {
- orders: Order;
+ orders: any;
  orderNum = '';
  status = '';
   output;
@@ -41,7 +41,7 @@ export class OrderStatusComponent implements OnInit {
     this.dataService.userLoggedin = false;
   }
   validateLogin(id, pw) {
-    if (this.dataService.validateLogin(id, pw) == 0) {
+    if (this.dataService.validateLogin(id, pw) === 0) {
       this.route = '/orderstatus';
       this.output = 'Incorrect user name and/or password. Please review and try again!';
     } else {
@@ -52,9 +52,5 @@ export class OrderStatusComponent implements OnInit {
     }
   }
 }
-interface Order {
-  order_num: string;
-  status: string;
-  message: string;
-}
+
 

@@ -1,0 +1,223 @@
+[debug] [2019-06-17T00:46:33.113Z] ----------------------------------------------------------------------
+[debug] [2019-06-17T00:46:33.116Z] Command:       /Users/m_379330/.nvm/versions/node/v8.9.2/bin/node /Users/m_379330/.nvm/versions/node/v8.9.2/bin/firebase deploy
+[debug] [2019-06-17T00:46:33.117Z] CLI Version:   7.0.0
+[debug] [2019-06-17T00:46:33.117Z] Platform:      darwin
+[debug] [2019-06-17T00:46:33.117Z] Node Version:  v8.9.2
+[debug] [2019-06-17T00:46:33.118Z] Time:          Sun Jun 16 2019 17:46:33 GMT-0700 (PDT)
+[debug] [2019-06-17T00:46:33.118Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2019-06-17T00:46:33.208Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2019-06-17T00:46:33.209Z] > authorizing via signed-in user
+[debug] [2019-06-17T00:46:33.209Z] [iam] checking project rx2u-ng4 for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2019-06-17T00:46:33.211Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2019-06-17T00:46:33.211Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2019-06-17T00:46:33.436Z] <<< HTTP RESPONSE 200
+[debug] [2019-06-17T00:46:33.535Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/rx2u-ng4:testIamPermissions  
+
+[debug] [2019-06-17T00:46:33.789Z] <<< HTTP RESPONSE 200
+[debug] [2019-06-17T00:46:33.791Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/rx2u-ng4  
+ 
+[debug] [2019-06-17T00:46:34.072Z] <<< HTTP RESPONSE 200
+[info] 
+[info] === Deploying to 'rx2u-ng4'...
+[info] 
+[info] i  deploying hosting
+[debug] [2019-06-17T00:46:34.077Z] >>> HTTP REQUEST POST https://firebasehosting.googleapis.com/v1beta1/sites/rx2u-ng4/versions  
+
+[debug] [2019-06-17T00:47:49.427Z] ----------------------------------------------------------------------
+[debug] [2019-06-17T00:47:49.429Z] Command:       /Users/m_379330/.nvm/versions/node/v8.9.2/bin/node /Users/m_379330/.nvm/versions/node/v8.9.2/bin/firebase deploy
+[debug] [2019-06-17T00:47:49.430Z] CLI Version:   7.0.0
+[debug] [2019-06-17T00:47:49.430Z] Platform:      darwin
+[debug] [2019-06-17T00:47:49.430Z] Node Version:  v8.9.2
+[debug] [2019-06-17T00:47:49.431Z] Time:          Sun Jun 16 2019 17:47:49 GMT-0700 (PDT)
+[debug] [2019-06-17T00:47:49.431Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2019-06-17T00:47:49.443Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2019-06-17T00:47:49.443Z] > authorizing via signed-in user
+[debug] [2019-06-17T00:47:49.444Z] [iam] checking project rx2u-ng4 for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2019-06-17T00:47:49.446Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/rx2u-ng4:testIamPermissions  
+
+[debug] [2019-06-17T00:47:49.957Z] <<< HTTP RESPONSE 200
+[debug] [2019-06-17T00:47:49.960Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/rx2u-ng4  
+ 
+[debug] [2019-06-17T00:47:50.149Z] <<< HTTP RESPONSE 200
+[info] 
+[info] === Deploying to 'rx2u-ng4'...
+[info] 
+[info] i  deploying hosting
+[debug] [2019-06-17T00:47:50.154Z] >>> HTTP REQUEST POST https://firebasehosting.googleapis.com/v1beta1/sites/rx2u-ng4/versions  
+
+[debug] [2019-06-17T00:48:01.216Z] <<< HTTP RESPONSE 503
+[debug] [2019-06-17T00:48:01.216Z] <<< HTTP RESPONSE BODY
+[error] 
+[error] Error: HTTP Error: 503, The service is currently unavailable.
+[debug] [2019-06-17T00:48:01.219Z] Error Context: {
+  "body": {
+    "error": {
+      "code": 503,
+      "message": "The service is currently unavailable.",
+      "status": "UNAVAILABLE"
+    }
+  },
+  "response": {
+    "statusCode": 503,
+    "body": {
+      "error": {
+        "code": 503,
+        "message": "The service is currently unavailable.",
+        "status": "UNAVAILABLE"
+      }
+    },
+    "headers": {
+      "vary": "X-Origin, Referer, Origin,Accept-Encoding",
+      "content-type": "application/json; charset=UTF-8",
+      "date": "Mon, 17 Jun 2019 00:48:01 GMT",
+      "server": "ESF",
+      "cache-control": "private",
+      "x-xss-protection": "0",
+      "x-frame-options": "SAMEORIGIN",
+      "x-content-type-options": "nosniff",
+      "alt-svc": "quic=\":443\"; ma=2592000; v=\"46,44,43,39\"",
+      "accept-ranges": "none",
+      "transfer-encoding": "chunked"
+    },
+    "request": {
+      "uri": {
+        "protocol": "https:",
+        "slashes": true,
+        "auth": null,
+        "host": "firebasehosting.googleapis.com",
+        "port": 443,
+        "hostname": "firebasehosting.googleapis.com",
+        "hash": null,
+        "search": null,
+        "query": null,
+        "pathname": "/v1beta1/sites/rx2u-ng4/versions",
+        "path": "/v1beta1/sites/rx2u-ng4/versions",
+        "href": "https://firebasehosting.googleapis.com/v1beta1/sites/rx2u-ng4/versions"
+      },
+      "method": "POST"
+    }
+  }
+}
+[debug] [2019-06-17T00:48:34.258Z] ----------------------------------------------------------------------
+[debug] [2019-06-17T00:48:34.260Z] Command:       /Users/m_379330/.nvm/versions/node/v8.9.2/bin/node /Users/m_379330/.nvm/versions/node/v8.9.2/bin/firebase deploy
+[debug] [2019-06-17T00:48:34.261Z] CLI Version:   7.0.0
+[debug] [2019-06-17T00:48:34.261Z] Platform:      darwin
+[debug] [2019-06-17T00:48:34.261Z] Node Version:  v8.9.2
+[debug] [2019-06-17T00:48:34.261Z] Time:          Sun Jun 16 2019 17:48:34 GMT-0700 (PDT)
+[debug] [2019-06-17T00:48:34.261Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2019-06-17T00:48:34.271Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2019-06-17T00:48:34.271Z] > authorizing via signed-in user
+[debug] [2019-06-17T00:48:34.271Z] [iam] checking project rx2u-ng4 for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2019-06-17T00:48:34.273Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/rx2u-ng4:testIamPermissions  
+
+[debug] [2019-06-17T00:48:34.960Z] <<< HTTP RESPONSE 200
+[debug] [2019-06-17T00:48:34.963Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/rx2u-ng4  
+ 
+[debug] [2019-06-17T00:48:35.169Z] <<< HTTP RESPONSE 200
+[info] 
+[info] === Deploying to 'rx2u-ng4'...
+[info] 
+[info] i  deploying hosting
+[debug] [2019-06-17T00:48:35.175Z] >>> HTTP REQUEST POST https://firebasehosting.googleapis.com/v1beta1/sites/rx2u-ng4/versions  
+
+[debug] [2019-06-17T00:48:40.309Z] <<< HTTP RESPONSE 200
+[info] i  hosting[rx2u-ng4]: beginning deploy...
+[info] i  hosting[rx2u-ng4]: found 27 files in dist
+[debug] [2019-06-17T00:48:40.326Z] [hosting] hash cache [ZGlzdA] load error: lines is not defined
+[debug] [2019-06-17T00:48:40.768Z] [hosting] hash cache [ZGlzdA] stored for 27 files
+[debug] [2019-06-17T00:48:40.768Z] [hosting][hash queue][FINAL]
+[debug] [2019-06-17T00:48:40.768Z] >>> HTTP REQUEST POST https://firebasehosting.googleapis.com/v1beta1/sites/rx2u-ng4/versions/07390852c0243efd:populateFiles  
+ <request body omitted>
+[debug] [2019-06-17T00:48:47.633Z] <<< HTTP RESPONSE 200
+[debug] [2019-06-17T00:48:47.638Z] [hosting][populate queue][FINAL]
+[debug] [2019-06-17T00:48:47.638Z] [hosting] uploads queued: 3
+[debug] [2019-06-17T00:48:49.040Z] [hosting][upload queue][FINAL]
+[info] ✔  hosting[rx2u-ng4]: file upload complete
+[debug] [2019-06-17T00:48:49.040Z] [hosting] deploy completed after 8730ms
+[debug] [2019-06-17T00:48:49.041Z] [
+  {
+    "config": {
+      "public": "dist",
+      "ignore": [
+        "firebase.json",
+        "**/.*",
+        "**/node_modules/**"
+      ],
+      "rewrites": [
+        {
+          "source": "**",
+          "destination": "/index.html"
+        }
+      ],
+      "site": "rx2u-ng4"
+    },
+    "site": "rx2u-ng4",
+    "version": "sites/rx2u-ng4/versions/07390852c0243efd"
+  }
+]
+[info] i  hosting[rx2u-ng4]: finalizing version...
+[debug] [2019-06-17T00:48:49.042Z] >>> HTTP REQUEST PATCH https://firebasehosting.googleapis.com/v1beta1/sites/rx2u-ng4/versions/07390852c0243efd?updateMask=status  
+
+[debug] [2019-06-17T00:48:49.445Z] <<< HTTP RESPONSE 200
+[debug] [2019-06-17T00:48:49.446Z] [hosting] finalized version for rx2u-ng4:
+[info] ✔  hosting[rx2u-ng4]: version finalized
+[info] i  hosting[rx2u-ng4]: releasing new version...
+[debug] [2019-06-17T00:48:49.447Z] >>> HTTP REQUEST POST https://firebasehosting.googleapis.com/v1beta1/sites/rx2u-ng4/releases?version_name=sites/rx2u-ng4/versions/07390852c0243efd  
+
+[debug] [2019-06-17T00:48:59.752Z] <<< HTTP RESPONSE 503
+[debug] [2019-06-17T00:48:59.753Z] <<< HTTP RESPONSE BODY
+[error] 
+[error] Error: HTTP Error: 503, The service is currently unavailable.
+[debug] [2019-06-17T00:48:59.756Z] Error Context: {
+  "body": {
+    "error": {
+      "code": 503,
+      "message": "The service is currently unavailable.",
+      "status": "UNAVAILABLE"
+    }
+  },
+  "response": {
+    "statusCode": 503,
+    "body": {
+      "error": {
+        "code": 503,
+        "message": "The service is currently unavailable.",
+        "status": "UNAVAILABLE"
+      }
+    },
+    "headers": {
+      "vary": "X-Origin, Referer, Origin,Accept-Encoding",
+      "content-type": "application/json; charset=UTF-8",
+      "date": "Mon, 17 Jun 2019 00:48:59 GMT",
+      "server": "ESF",
+      "cache-control": "private",
+      "x-xss-protection": "0",
+      "x-frame-options": "SAMEORIGIN",
+      "x-content-type-options": "nosniff",
+      "alt-svc": "quic=\":443\"; ma=2592000; v=\"46,44,43,39\"",
+      "accept-ranges": "none",
+      "transfer-encoding": "chunked"
+    },
+    "request": {
+      "uri": {
+        "protocol": "https:",
+        "slashes": true,
+        "auth": null,
+        "host": "firebasehosting.googleapis.com",
+        "port": 443,
+        "hostname": "firebasehosting.googleapis.com",
+        "hash": null,
+        "search": "?version_name=sites/rx2u-ng4/versions/07390852c0243efd",
+        "query": "version_name=sites/rx2u-ng4/versions/07390852c0243efd",
+        "pathname": "/v1beta1/sites/rx2u-ng4/releases",
+        "path": "/v1beta1/sites/rx2u-ng4/releases?version_name=sites/rx2u-ng4/versions/07390852c0243efd",
+        "href": "https://firebasehosting.googleapis.com/v1beta1/sites/rx2u-ng4/releases?version_name=sites/rx2u-ng4/versions/07390852c0243efd"
+      },
+      "method": "POST"
+    }
+  }
+}

@@ -17,7 +17,7 @@ export class RequestPickupComponent implements OnInit {
   phone;
   firstName;
   lastName;
-  profile: Profile;
+  profile: any = [];
   constructor(private dataService: InitialDataService, public appComp: AppComponent) {
     if (this.userLoggedin) {
       this.getUserProfile();
@@ -60,14 +60,4 @@ export class RequestPickupComponent implements OnInit {
     });
   }
 }
-interface Profile {
-  order_date;
-  order_num;
-  first;
-  last;
-  dob;
-  address;
-  pharmacy;
-  cust_phone;
-  status;
-}
+

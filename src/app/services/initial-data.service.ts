@@ -1,5 +1,7 @@
 import {Injectable} from '@angular/core';
-import {Http} from '@angular/http';
+// import {Http} from '@angular/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { Observable } from 'rxjs/Observable';
 import 'rxjs/add/operator/map';
 
 @Injectable()
@@ -22,36 +24,33 @@ export class InitialDataService {
   // homeNet = '127.0.0.1';
   // workNet = '10.227.212.187';
   // workNet2 = '10.227.212.53';
-  // cloudRest = 'https://rx2u-rest.appspot.com';
+
   network = 'https://rx2u-rest.appspot.com';
 
-  constructor(public http: Http) {
+  constructor(public http: HttpClient) {
   }
-
   placeOrder(first, last, phone, dob, address, pharmacy) {
-    return this.http.get('http://' + this.network + '/rest/orderService/placeOrder?first='
-      + first + '&last=' + last + '&phone=' + phone + '&dob=' + dob + '&address=' + address + '&pharmacy=' + pharmacy)
-      .map(res => res.text());
+    return this.http.get(this.network + '/rest/orderService/placeOrder?first='
+      + first + '&last=' + last + '&phone=' + phone + '&dob=' + dob + '&address=' + address + '&pharmacy=' + pharmacy);
   }
   checkOrder() {
-    return this.http.get('http://' + this.network + '/rest/orderService/checkOrders').map(res => res.json());
+    return this.http.get(this.network + '/rest/orderService/checkOrders');
+  //  return this.http.get('http://' + '127.0.0.1' + '/rx2u/checkOrder.php');
   }
   lookupOrder(order) {
-    return this.http.get('http://' + this.network + '/rest/orderService/lookupOrder/' + order)
-      .map(res => res.json());
+    return this.http.get(this.network + '/rest/orderService/lookupOrder/' + order);
   }
   getUserProfile(phoneNum) {
-    return this.http.get('http://' + this.network + '/rest/customerService/getProfileView/' + phoneNum)
-      .map(res => res.json());
+    return this.http.get(this.network + '/rest/customerService/getProfileView/' + phoneNum);
   }
 
   userReceive(order) {
-    return this.http.get('http://' + this.network + '/rest/customerService/receive/' + order).map(res => res.text());
+    return this.http.get(this.network + '/rest/customerService/receive/' + order);
   }
 
   validateLogin(id, pw) {
     this.xhttp = new XMLHttpRequest();
-    this.xhttp.open('GET', 'http://' + this.network + '/rest/customerService/authenticate?username=' + id + '&password=' + pw, false);
+    this.xhttp.open('GET', this.network + '/rest/customerService/authenticate?username=' + id + '&password=' + pw, false);
     this.xhttp.send(null);
 
     if (this.xhttp.status === 200) {
@@ -69,7 +68,7 @@ export class InitialDataService {
 
   validateCredentials(id, pw) {
     this.xhttp = new XMLHttpRequest();
-    this.xhttp.open('GET', 'http://' + this.network + '/rest/customerService/authenticate?username=' + id + '&password=' + pw, false);
+    this.xhttp.open('GET', this.network + '/rest/customerService/authenticate?username=' + id + '&password=' + pw, false);
     this.xhttp.send(null);
 
     if (this.xhttp.status === 200) {

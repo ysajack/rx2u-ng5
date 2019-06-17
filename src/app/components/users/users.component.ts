@@ -9,7 +9,7 @@ import { OrderStatusComponent } from '../order-status/order-status.component';
   styleUrls: ['./users.component.css']
 })
 export class UsersComponent implements OnInit {
- order: Order;
+ order: any = [];
  userLoggedin = true;
  first = this.dataService.id;
  last = this.dataService.pw;
@@ -35,14 +35,4 @@ export class UsersComponent implements OnInit {
     this.dataService.getUserProfile(this.dataService.phone).subscribe(orderObj =>
       this.order = orderObj);
   }
-}
-interface Order {
-  order_date;
-  order_num;
-  first;
-  last;
-  dob;
-  cust_phone;
-  status;
-  message;
 }
