@@ -19,11 +19,11 @@ export class InitialDataService {
 
   // proxy = 'https://cors-anywhere.herokuapp.com/';
   // homeNet = '10.0.0.41';
-  homeNet = '127.0.0.1';
+  // homeNet = '127.0.0.1';
   // workNet = '10.227.212.187';
   // workNet2 = '10.227.212.53';
-  cloudRest = 'http://rx2u-rest.appspot.com';
-  network = this.cloudRest;
+  // cloudRest = 'https://rx2u-rest.appspot.com';
+  network = 'https://rx2u-rest.appspot.com';
 
   constructor(public http: Http) {
   }
