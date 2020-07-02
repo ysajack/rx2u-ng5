@@ -19,13 +19,7 @@ export class InitialDataService {
   userLoggedin = false;
   homeRoute;
 
-  // proxy = 'https://cors-anywhere.herokuapp.com/';
-  // homeNet = '10.0.0.41';
-  // homeNet = '127.0.0.1';
-  // workNet = '10.227.212.187';
-  // workNet2 = '10.227.212.53';
-
-  network = 'https://rx2u-rest.appspot.com';
+  network = 'https://rx2u-rest.appspot.com'; //change your REST endpoint, if you're building on your own
 
   constructor(public http: HttpClient) {
   }
